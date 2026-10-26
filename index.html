@@ -4,13 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pablo Pío Rejo Iglesias</title>
-<meta name="description" content="Enlaces y contacto de Pablo Pío Rejo Iglesias">
+<meta name="description" content="Enlaces de Pablo Pío Rejo Iglesias">
 <meta name="theme-color" content="#0b0b14">
 <meta property="og:title" content="Pablo Pío Rejo Iglesias">
-<meta property="og:description" content="Enlaces y contacto">
+<meta property="og:description" content="Mis redes y enlaces">
 <meta property="og:image" content="https://pablorejo.github.io/avatar.jpg">
 <meta property="og:url" content="https://pablorejo.github.io/">
 <link rel="icon" href="avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0b0b14;
@@ -21,13 +24,18 @@
     --muted: #9a9ab0;
     --cyan: #22d3ee;
     --magenta: #d946ef;
+    --ig1: #feda75;
+    --ig2: #fa7e1e;
+    --ig3: #d62976;
+    --ig4: #962fbf;
+    --ig5: #4f5bd5;
   }
   * { box-sizing: border-box; margin: 0; }
   html {
     min-height: 100%;
     background:
-      radial-gradient(60rem 30rem at 50% -10rem, rgba(217, 70, 239, .18), transparent 60%),
-      radial-gradient(40rem 30rem at 50% 110%, rgba(34, 211, 238, .12), transparent 60%),
+      radial-gradient(55rem 28rem at 50% -8rem, rgba(214, 41, 118, .22), transparent 60%),
+      radial-gradient(42rem 30rem at 50% 115%, rgba(34, 211, 238, .12), transparent 60%),
       var(--bg);
   }
   body {
@@ -35,49 +43,79 @@
     font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     display: flex;
     justify-content: center;
-    padding: 48px 16px 32px;
+    padding: 56px 16px 40px;
+    -webkit-font-smoothing: antialiased;
   }
   main { width: 100%; max-width: 420px; text-align: center; }
+
+  .avatar-wrap { display: inline-block; position: relative; animation: float 6s ease-in-out infinite; }
   .avatar {
-    width: 112px; height: 112px; border-radius: 50%;
+    width: 118px; height: 118px; border-radius: 50%;
+    display: block;
     border: 2px solid transparent;
     background: linear-gradient(var(--bg), var(--bg)) padding-box,
-                linear-gradient(135deg, var(--magenta), var(--cyan)) border-box;
-    box-shadow: 0 0 32px rgba(34, 211, 238, .25);
+                linear-gradient(135deg, var(--ig3), var(--ig5), var(--cyan)) border-box;
+    box-shadow: 0 0 36px rgba(214, 41, 118, .28);
   }
-  h1 { font-size: 1.5rem; font-weight: 650; margin-top: 16px; letter-spacing: -.01em; }
-  ul { list-style: none; padding: 0; margin-top: 28px; display: grid; gap: 12px; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+  h1 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-size: 1.6rem; font-weight: 700; margin-top: 18px; letter-spacing: -.01em;
+  }
+  .handle { color: var(--muted); margin-top: 2px; font-size: .95rem; }
+
+  ul { list-style: none; padding: 0; margin-top: 30px; display: grid; gap: 13px; }
+
   a.btn {
     display: flex; align-items: center; gap: 14px;
-    padding: 14px 18px;
+    padding: 15px 18px;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 15px;
     color: var(--text); text-decoration: none; font-weight: 550;
-    transition: background .15s, border-color .15s, transform .15s;
+    transition: background .18s, border-color .18s, transform .18s, box-shadow .18s;
   }
-  a.btn:hover, a.btn:focus-visible { background: var(--card-hover); border-color: var(--cyan); transform: translateY(-1px); }
+  a.btn:hover, a.btn:focus-visible { background: var(--card-hover); border-color: var(--cyan); transform: translateY(-2px); }
   a.btn:active { transform: none; }
   a.btn svg { width: 22px; height: 22px; flex: none; }
   a.btn span { flex: 1; text-align: left; }
   a.btn small { color: var(--muted); font-weight: 400; font-size: .85rem; }
-  a.btn.primary {
-    background: linear-gradient(135deg, rgba(217, 70, 239, .22), rgba(34, 211, 238, .22));
-    border-color: rgba(34, 211, 238, .5);
+
+  /* Instagram: botón principal */
+  a.ig {
+    position: relative;
+    padding: 20px 22px;
+    border: none; border-radius: 18px;
+    background: linear-gradient(115deg, var(--ig1), var(--ig2) 28%, var(--ig3) 58%, var(--ig4) 80%, var(--ig5));
+    background-size: 160% 160%;
+    color: #fff; font-weight: 700; font-size: 1.08rem;
+    box-shadow: 0 10px 30px rgba(214, 41, 118, .38);
+    animation: shimmer 7s ease infinite;
   }
-  footer { color: var(--muted); font-size: .8rem; margin-top: 32px; }
+  a.ig:hover, a.ig:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(214, 41, 118, .5); }
+  a.ig svg { width: 28px; height: 28px; }
+  a.ig small { color: rgba(255,255,255,.85); font-weight: 500; display: block; font-size: .82rem; margin-top: 1px; }
+  @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+  footer { color: var(--muted); font-size: .8rem; margin-top: 34px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .avatar-wrap, a.ig { animation: none; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <img class="avatar" src="avatar.jpg" alt="Pablo Pío Rejo Iglesias">
+  <span class="avatar-wrap"><img class="avatar" src="avatar.jpg" alt="Pablo Pío Rejo Iglesias"></span>
   <h1>Pablo Pío Rejo Iglesias</h1>
+  <p class="handle">@pablorejo</p>
 
   <ul>
     <li>
-      <a class="btn primary" href="contacto.vcf" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
-        <span>Guardar contacto</span>
+      <a class="btn ig" href="https://www.instagram.com/pablorejo/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+        <span>Sígueme en Instagram<small>@pablorejo</small></span>
       </a>
     </li>
     <li>
@@ -90,12 +128,6 @@
       <a class="btn" href="https://github.com/pablorejo" target="_blank" rel="noopener">
         <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
         <span>GitHub <small>@pablorejo</small></span>
-      </a>
-    </li>
-    <li>
-      <a class="btn" href="https://www.instagram.com/pablorejo/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
-        <span>Instagram <small>@pablorejo</small></span>
       </a>
     </li>
     <li>
