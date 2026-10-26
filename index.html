@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pablo Pío Rejo Iglesias</title>
+<meta name="description" content="Enlaces y contacto de Pablo Pío Rejo Iglesias">
+<meta name="theme-color" content="#0b0b14">
+<meta property="og:title" content="Pablo Pío Rejo Iglesias">
+<meta property="og:description" content="Enlaces y contacto">
+<meta property="og:image" content="https://pablorejo.github.io/avatar.jpg">
+<meta property="og:url" content="https://pablorejo.github.io/">
+<link rel="icon" href="avatar.jpg">
+<style>
+  :root {
+    --bg: #0b0b14;
+    --card: #14141f;
+    --card-hover: #1c1c2b;
+    --border: #262638;
+    --text: #ececf4;
+    --muted: #9a9ab0;
+    --cyan: #22d3ee;
+    --magenta: #d946ef;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html {
+    min-height: 100%;
+    background:
+      radial-gradient(60rem 30rem at 50% -10rem, rgba(217, 70, 239, .18), transparent 60%),
+      radial-gradient(40rem 30rem at 50% 110%, rgba(34, 211, 238, .12), transparent 60%),
+      var(--bg);
+  }
+  body {
+    color: var(--text);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 48px 16px 32px;
+  }
+  main { width: 100%; max-width: 420px; text-align: center; }
+  .avatar {
+    width: 112px; height: 112px; border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--bg), var(--bg)) padding-box,
+                linear-gradient(135deg, var(--magenta), var(--cyan)) border-box;
+    box-shadow: 0 0 32px rgba(34, 211, 238, .25);
+  }
+  h1 { font-size: 1.5rem; font-weight: 650; margin-top: 16px; letter-spacing: -.01em; }
+  ul { list-style: none; padding: 0; margin-top: 28px; display: grid; gap: 12px; }
+  a.btn {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    color: var(--text); text-decoration: none; font-weight: 550;
+    transition: background .15s, border-color .15s, transform .15s;
+  }
+  a.btn:hover, a.btn:focus-visible { background: var(--card-hover); border-color: var(--cyan); transform: translateY(-1px); }
+  a.btn:active { transform: none; }
+  a.btn svg { width: 22px; height: 22px; flex: none; }
+  a.btn span { flex: 1; text-align: left; }
+  a.btn small { color: var(--muted); font-weight: 400; font-size: .85rem; }
+  a.btn.primary {
+    background: linear-gradient(135deg, rgba(217, 70, 239, .22), rgba(34, 211, 238, .22));
+    border-color: rgba(34, 211, 238, .5);
+  }
+  footer { color: var(--muted); font-size: .8rem; margin-top: 32px; }
+</style>
+</head>
+<body>
+<main>
+  <img class="avatar" src="avatar.jpg" alt="Pablo Pío Rejo Iglesias">
+  <h1>Pablo Pío Rejo Iglesias</h1>
+
+  <ul>
+    <li>
+      <a class="btn primary" href="contacto.vcf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        <span>Guardar contacto</span>
+      </a>
+    </li>
+    <li>
+      <a class="btn" href="https://github.com/pablorejo" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span>GitHub <small>@pablorejo</small></span>
+      </a>
+    </li>
+    <li>
+      <a class="btn" href="mailto:pablopiorejoiglesias@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span>Correo</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>pablorejo.github.io</footer>
+</main>
+</body>
+</html>
